@@ -1,0 +1,220 @@
+:root {
+    --color1: #FFE6E6;
+    --color2: #E1AFD1;
+    --color3: #AD88C6;
+    --color4: #7469B6;
+    --padding-x: 8rem;
+    --padding-y: 0.2rem;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.navbar-main{
+    background-color: var(--color3);
+    display: flex;
+    justify-content: space-between;
+    padding: var(--padding-y) var(--padding-x);
+}
+.navbar-logo{
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    
+}
+.navbar-logo-icon{
+    padding: 0.7rem;
+    color: black;
+   
+    opacity: 19px;
+}
+.navbar-logo-icon:hover{
+    background-color: var(--color2);
+}
+.navbar-logo-text{
+    font-weight: bold;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: var(--color4);
+    
+}
+.navbar-logo-text:hover{
+    color: var(--color1);
+}
+.navbar-menu{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.7rem;
+}
+.navbar-item{
+    font-weight: bold;
+}
+.navbar-link{
+    text-decoration: none;
+    position: relative;
+    transition: all 0.4s ease;
+    z-index: 1;
+
+
+}
+.navbar-link::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 0;
+    background-color: var(--color4);
+    z-index: -1;
+    transition: all 5s ease;
+    border-radius: 14px;
+   
+}
+.navbar-link:hover{
+    background-color: var(--color4);
+    color: var(--color1);
+}
+.navbar-link:hover::before{
+    /* width: 100%; */
+    height: 100%;
+}
+.navbar-cta{
+   border: none;
+    outline: none;
+    width: 200px;
+    height: 50px;
+    border-radius: 14px;
+    background-color: var(--color2 );
+    border: 2px solid var(--color4);
+    position: relative;
+    font-weight: bold;
+    transition: all 0.4s ease;
+    z-index: 1;
+}
+.navbar-cta::before{
+    content: "";
+    width: 52px;
+    height: 0px;
+   transition: all 0.4s ease;
+    position: absolute;
+    background-color: var(--color4);
+    left: 0;
+    top: 0;
+    z-index: -1;
+    border-radius: 11px;
+    overflow: hidden;
+}
+.navbar-cta:hover{
+   color: var(--color1);
+
+}
+.navbar-cta:hover::before{
+    width: 100%;
+    height: 100%;
+}
+.heros-background{
+    background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url("./media/background.jpg");
+    max-height: 80vh !important;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0  calc( 5rem + var(--padding-x) );
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    grid-template-rows: repeat(1,1fr);
+    overflow: hidden;
+}
+
+.heros-img{
+    position: relative;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    height: 90vh;
+   background: transparent;
+}
+
+.heros-img img{
+    width: 90% !important;
+    height: 100% !important;
+    position: absolute;
+    bottom: 0;
+    right: 0; 
+}
+
+.heros-text h3{
+    color: var(--color1);
+    opacity: 0.5;
+    background-color: #7743DB;
+    display: inline-block;
+    padding: 1rem;
+}
+
+.heros-text h1{
+    color: var(--color2);
+    font-size: 4rem;
+}
+
+.heros-text p{
+    color: black;
+    /* opacity: 0.5; */
+    padding: 1rem;
+    background-color: var(--color3);
+}
+
+.heros-text h4{
+    color: var(--color1);
+    /* opacity: 0.5; */
+}
+
+/* .heros-cta-container{
+
+} */
+
+.heros-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.heros-cta{
+    border: 0;
+    outline: 0;
+    padding: 0.65rem 1rem;
+    font-weight: bolder;
+    border-radius: 10px;
+    background-color: var(--color4);
+    color: var(--color1);
+}
+
+.heros-cta-2{
+    background-color:rgba(173, 162, 146, 0.6);
+    border: 2px solid var(--color1);
+    color: var(--color4);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.heros-cta-2::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    background-color: var(--color4);
+    z-index: -1;
+    transition: all 0.5s ease;
+}
+.heros-cta-2:hover{
+    color: var(--color1);
+}
+
+.heros-cta-2:hover::before{
+    height: 100%;
+}
