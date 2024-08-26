@@ -9,6 +9,9 @@
 
 #navbar {
     box-shadow: 0 0 0.5 0.9 var(--color4);
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 * {
@@ -22,6 +25,7 @@
     display: flex;
     justify-content: space-between;
     padding: var(--padding-y) var(--padding-x);
+    
 }
 
 .navbar-logo {
@@ -139,6 +143,7 @@
 
 .heros-background {
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5));
+    
     max-height: 80vh !important;
     background-position: center;
     background-size: cover;
@@ -157,6 +162,7 @@
     align-items: end;
     height: 90vh;
     background: transparent;
+    
 }
 
 .heros-img img {
@@ -454,36 +460,41 @@
 .contact-form{
     width: 89%;
     height: 150px;
-    padding:calc(4rem + var( --padding-y))   var(--padding-x);
-    background-color: var(--color1);
-    display: grid;
-    grid-template-columns: repeat(2 , 1fr);
-    
+    padding:calc(7rem + var( --padding-y))  var(--padding-x);
+    background-image: url(https://preview.colorlib.com/theme/personalportfolio/assets/img/gallery/section_bg02.jpg.webp);
+    background-size: cover;
+    background-position: center;
+
 }
 .contact-form-title{
-    
+   
+    height: 10px;
     font-size: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+    
 }
-.contact-form-cta{
-    position: absolute;
-    left: 70%;
-    top: 485%;
-    width: 35%;
-    height: 25%;
+.contact-form-title-heading{
+    color: var(--color4);
+    font-size: 3rem;
 }
-.button{
-    width: 25%;
-    height: 25%;
+.contact-form-title-button button{
+    width: 150px;
+    height: 50px;
+    color: var(--color1);
     background-color: var(--color4);
     border-radius: 10px;
     border: none;
+    outline: none;
     position: relative;
     z-index: 1;
     right: 0;
     top: 0;
     font-size: 1rem;
 }
-.button::before{
+.contact-form-title-button button::before{
     content: "";
     width: 0;
     height: 100%;
@@ -496,76 +507,77 @@
     border-radius: 10px;
     overflow: hidden;
 }
-.button:hover::before{
+.contact-form-title-button button:hover::before{
     width: 100%;
 }
-
-.p-i-box{
-    padding: calc(4rem + var(--padding-y))  var(--padding-x);
+.contact-form-title-heading, .contact-form-title-button{
+    flex-grow: 1;
 }
-.p-i-box > h1{
-    padding: 2rem 0;
-    font-size: 2.9rem;
+.contact-form-title-button button{
+    outline: none;
+    border: none;
+    font-size: rem;
+}
+.reviews-section-container{
+    padding: calc(4rem + var(--padding-y)) calc(19rem + var(--padding-x));
+}
+
+.reviews-section-container-heading{
     color: var(--color4);
+    font-size: 4rem;
+    width: 100%;
+    font-weight: bold;
+    margin-bottom: 3rem;
+}
 
-}
-.p-i-container{
+.reviews-section-container-cards{
     display: grid;
-    grid-template-columns: repeat(3 ,1fr);
-    gap: 2rem;
-   
+    grid-template-columns: repeat(3,1fr);
+    gap: 2.5rem;
 }
-.p-i-child{
-    width: 200px;
-    height: 200px;
+
+.review-card{
+    box-shadow: 0 0 9px -2px black;
+    border-radius: 14px;
+    padding: 1rem 2rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: calc(4rem + var(--padding-y)) var(--padding-x);
-    box-shadow: 0 0 4px -1px black;
-}
-.p-i-child-icon{
+    gap: 3rem;
+    background-color: var(--color3);
     position: relative;
-    height: 5px;
-    width: 100%;
     
-}
-.p-i-child-icon > img{
-    width: 100px;
-    height: 60px;
-    object-fit: cover;
-    
-}
-.p-i-circle{
-    width: 150px;
-    height: 150px;
-    background-color:  rgba(119, 67, 219, 0.2);
-    border-radius: 100%;
-    position: absolute;
-    top: 560%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-.p-i-title{
-    position: absolute;
-    top: 573%;
-    font-size: 2rem;
-    margin-bottom: 2rem;
-}
-.p-i-child-icon > img{
-    position: absolute;
-    top: 560%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     z-index: 1;
+    transition: all 0.4s ease;
 }
-/* .p-i-text{
-    
-    text-align: center;
-    font-weight: 500;
-    color: rgba(0, 0, 0, 0.7);
+.review-card::before{
+    content: "";
+    width: 0;
+    height: 100%;
     position: absolute;
-    top: 585%;
-    left: 10%;
-   padding: 0 2rem 0 1rem;
-} */
+    top: 10px;left: 0;
+    z-index: -1;
+    background-color: var(--color4);
+    border-radius: 14px;
+    
+}
+.review-card:hover::before{
+    width: 100%;
+}
+
+.user-profile{
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    gap: 1rem;
+}
+
+.user-profile img{
+    width: 75px ;
+    height: 75px;
+    border-radius: 100%;
+}
+
+.user-profile-data{
+    display: flex;
+    flex-direction: column;
+}
