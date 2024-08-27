@@ -4,7 +4,7 @@
     --color3: #AD88C6;
     --color4: #462fcc;
     --padding-x: 6rem;
-    --padding-y: 0.2rem;
+    --padding-y: 0.1rem;
 }
 
 #navbar {
@@ -519,7 +519,7 @@
     font-size: rem;
 }
 .reviews-section-container{
-    padding: calc(4rem + var(--padding-y)) calc(19rem + var(--padding-x));
+    padding: calc(4rem + var(--padding-y)) calc(16rem + var(--padding-x));
     z-index: -1;
   
 }
@@ -591,17 +591,17 @@
     grid-template-columns: repeat(2,1fr);
 }
 .feedbackform{
-    padding: calc(4rem + var(--padding-y)) var(--padding-x);
+    padding: calc(3rem + var(--padding-y))calc(16px + var(--padding-x));
     
 
 }
 .feedbackform h1{
     font-size: 3rem;
-    padding: 1rem 0;
+    padding: 10px 1px;
 }
 .feedbackform p{
     font-size: 1rem;
-    padding: 2rem 0;
+    padding: 1rem 0;
 }
 .F-form form{
     justify-content: space-between;
@@ -610,7 +610,7 @@
     flex-direction: column;
     width: 150px;
     height: 50px;
-    padding: calc(4rem + var(--padding-y)) calc(19rem + var(--padding-x));
+    padding: calc(5rem + var(--padding-y)) calc(19rem + var(--padding-x));
    font-weight: bolder;
     gap: 2rem;
     border: none;
@@ -625,9 +625,53 @@
 }
 .F-form form button{
     /* padding: var(--padding-y)  var(--padding-x); */
-    padding:calc(1rem + var(--padding-y)) calc(4.2rem + var(--padding-x));
+    padding:calc(10px + var(--padding-y)) calc(4.2rem + var(--padding-x));
+    background-color: var(--color4);
+    border: none;
+    outline: none;
     
 }
 .F-form form .i1{
     padding: 4rem 7rem;
+}
+.footer{
+    /* width: 87.5%;
+    height: 100%; */
+    background-color: var(--color4);
+    padding:calc(10rem + var(--padding-y)) calc(2rem + var(--padding-x));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+.footer-parent h1{
+    font-size: 3.5rem;
+    
+}
+.footer-child p{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+    padding: 2rem 2rem;
+    font-size: 1.3rem;
+}
+.f-p-child-2{
+    display: grid;
+    grid-template-columns: repeat(2 ,1fr);
+}
+.f-p-c-1{
+    position: absolute;
+    left: 0;
+    top:750%;
+    padding: 1rem 4rem;
+}
+.f-p-c-2{
+    position: absolute;
+    left: 60%;
+    top:750%;
+    padding: 1rem 2rem;
+}
+.f-p-c-i{
+   padding: 0 1rem;
 }
