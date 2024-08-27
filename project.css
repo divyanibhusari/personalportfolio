@@ -520,6 +520,8 @@
 }
 .reviews-section-container{
     padding: calc(4rem + var(--padding-y)) calc(19rem + var(--padding-x));
+    z-index: -1;
+  
 }
 
 .reviews-section-container-heading{
@@ -580,4 +582,52 @@
 .user-profile-data{
     display: flex;
     flex-direction: column;
+}
+#form{
+    width: 100%;
+    height: 150%;
+    background-color: var(--color3);
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.feedbackform{
+    padding: calc(4rem + var(--padding-y)) var(--padding-x);
+    
+
+}
+.feedbackform h1{
+    font-size: 3rem;
+    padding: 1rem 0;
+}
+.feedbackform p{
+    font-size: 1rem;
+    padding: 2rem 0;
+}
+.F-form form{
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    height: 50px;
+    padding: calc(4rem + var(--padding-y)) calc(19rem + var(--padding-x));
+   font-weight: bolder;
+    gap: 2rem;
+    border: none;
+    outline: none;
+  
+}
+
+.F-form form input{
+    /* width: 250%;
+    height: 490%; */
+    padding:calc(1rem + var(--padding-y)) calc(1rem + var(--padding-x));
+}
+.F-form form button{
+    /* padding: var(--padding-y)  var(--padding-x); */
+    padding:calc(1rem + var(--padding-y)) calc(4.2rem + var(--padding-x));
+    
+}
+.F-form form .i1{
+    padding: 4rem 7rem;
 }
