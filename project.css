@@ -6,7 +6,16 @@
     --padding-x: 6rem;
     --padding-y: 0.1rem;
 }
-
+body{
+    padding: 0;
+    margin: 0;
+}
+@media screen and (max-width:576px) {
+    body{
+        flex-direction: column;
+    }
+    
+}
 #navbar {
     box-shadow: 0 0 0.5 0.9 var(--color4);
     position: sticky;
@@ -443,7 +452,7 @@
 .project-grid {
     display: grid;
     height: 10%;
-    object-fit: cover;
+    
     gap: 1px;
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: repeat(3, 1fr);
@@ -451,7 +460,7 @@
 
 .grid-project>img {
     width: 100%;
-    object-fit: cover;
+    
 }
 
 .grid-project-child-1 {
@@ -461,9 +470,13 @@
 
 .grid-project-child {
     overflow: hidden;
+    /* object-fit: cover; */
+}
+.grid-project-child > img{
+    object-fit: cover; 
 }
 .contact-form{
-    width: 89%;
+    width: 87.3%;
     height: 150px;
     padding:calc(7rem + var( --padding-y))  var(--padding-x);
     background-image: url(https://preview.colorlib.com/theme/personalportfolio/assets/img/gallery/section_bg02.jpg.webp);
@@ -524,7 +537,7 @@
     font-size: rem;
 }
 .reviews-section-container{
-    padding: calc(4rem + var(--padding-y)) calc(16rem + var(--padding-x));
+    padding: calc(3rem + var(--padding-y)) calc(11rem + var(--padding-x));
     z-index: -1;
   
 }
@@ -546,7 +559,7 @@
 .review-card{
     box-shadow: 0 0 9px -2px black;
     border-radius: 14px;
-    padding: 1rem 2rem;
+    padding: 2rem 4rem;
     display: flex;
     flex-direction: column;
     gap: 3rem;
@@ -582,11 +595,25 @@
     width: 75px ;
     height: 75px;
     border-radius: 100%;
+    position: absolute;
+    left: 1px;
+    gap: 2rem;
+    top: 10px;
 }
-
+.p1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 25px;
+    top: 10px;
+}
 .user-profile-data{
     display: flex;
     flex-direction: column;
+    position: absolute;
+   top: 30px;
+    left: 90px;
 }
 #form{
     width: 100%;
@@ -675,13 +702,13 @@
 .f-p-c-1{
     position: absolute;
     left: 0;
-    top:750%;
+    top:720%;
     padding: 1rem 4rem;
 }
 .f-p-c-2{
     position: absolute;
     left: 70%;
-    top:750%;
+    top:720%;
     padding: 1rem 2rem;
 }
 .f-p-c-i{
@@ -695,7 +722,7 @@
 
 .f-h1{
     position: absolute;
-    top: 705%;
+    top: 680%;
     display: flex;
     justify-content: center;
     align-items: center;
