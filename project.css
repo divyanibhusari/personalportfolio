@@ -11,7 +11,7 @@
     box-shadow: 0 0 0.5 0.9 var(--color4);
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 9999;
 }
 
 * {
@@ -44,6 +44,7 @@
 
 .navbar-logo-icon:hover {
     background-color: var(--color2);
+    
 }
 
 .navbar-logo-text {
@@ -56,6 +57,7 @@
 
 .navbar-logo-text:hover {
     color: var(--color1);
+    font-style: italic;
 }
 
 .navbar-menu {
@@ -193,7 +195,10 @@
     padding: 1rem;
     background-color: var(--color3);
 }
-
+.heros-text p:hover{
+    background-color: var(--color4);
+    font-style: italic;
+}
 .heros-text h4 {
     color: var(--color1);
     /* opacity: 0.5; */
@@ -653,8 +658,15 @@
    display: flex;
    justify-content: center;
    align-items: center;
-    padding: 2rem 2rem;
+    padding: 1rem 1rem;
     font-size: 1.3rem;
+}
+.footer-child span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    padding: 1px 0;
 }
 .f-p-child-2{
     display: grid;
@@ -668,10 +680,24 @@
 }
 .f-p-c-2{
     position: absolute;
-    left: 60%;
+    left: 70%;
     top:750%;
     padding: 1rem 2rem;
 }
 .f-p-c-i{
    padding: 0 1rem;
+   
+}
+.f-p-c-i:hover{
+    color: #9021db;
+    transition: all ease 0.2s    ;
+}
+
+.f-h1{
+    position: absolute;
+    top: 705%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
